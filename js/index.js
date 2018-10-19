@@ -1,4 +1,4 @@
-let rgbDef = function (value1, value2, value3, value4, range1, range2, range3, range4,  result, txt) {
+let rgbaDef = function (value1, value2, value3, value4, range1, range2, range3, range4,  result, txt) {
 
   value1.innerHTML = range1;
   value2.innerHTML = range2;
@@ -10,25 +10,25 @@ let rgbDef = function (value1, value2, value3, value4, range1, range2, range3, r
 
 }
 
-let rgbDefFunc = function () {
+let rgbaDefFunc = function () {
 
   let ranges = document.querySelectorAll(".selector_range")
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
-  rgbDef(values[0], values[1], values[2], values[3], ranges[0].value, ranges[1].value, ranges[2].value, ranges[3].value, result, txt)
+  rgbaDef(values[0], values[1], values[2], values[3], ranges[0].value, ranges[1].value, ranges[2].value, ranges[3].value, result, txt)
 
 }
-rgbDefFunc()
+rgbaDefFunc()
 
 function showValue(value) {
-  rgbDefFunc()
+  rgbaDefFunc()
 }
 
 // Reset
 // ---------------------------------------------------
 
-let rgbReset = function(range1, range2, range3, range4, value1, value2, value3, value4, result, txt) {
+let rgbaReset = function(range1, range2, range3, range4, value1, value2, value3, value4, result, txt) {
 
   range1.value = '210'
   range2.value = '100'
@@ -43,16 +43,16 @@ let rgbReset = function(range1, range2, range3, range4, value1, value2, value3, 
 
 }
 
-let rgbResetFunc = function() {
+let rgbaResetFunc = function() {
 
   let ranges = document.querySelectorAll(".selector_range")
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
-  rgbReset(ranges[0],ranges[1],ranges[2],ranges[3],values[0],values[1],values[2],values[3],result,txt)
+  rgbaReset(ranges[0],ranges[1],ranges[2],ranges[3],values[0],values[1],values[2],values[3],result,txt)
 
 }
 
 function reset() {
-  rgbResetFunc()
+  rgbaResetFunc()
 }
