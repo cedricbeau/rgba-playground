@@ -92,4 +92,8 @@ body {
 .reset .btn:hover {
   background: white;
 }
+
+#opacitySelector {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
