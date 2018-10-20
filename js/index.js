@@ -1,22 +1,4 @@
 // -----------------------------------------------------------------------
-// DEFAULT VALUES
-// -----------------------------------------------------------------------
-
-// Default
-let defaultValues = {
-  r: '100',
-  g: '100',
-  b: '250',
-  a: '1'
-}
-
-// RGB
-let defaultRGBValues = "rgb("+ defaultValues.r +", "+ defaultValues.g +", "+ defaultValues.b +")"
-
-// RGBA
-let defaultRGBAValues = "rgb("+ defaultValues.r +", "+ defaultValues.g +", "+ defaultValues.b +", "+ defaultValues.a +")"
-
-// -----------------------------------------------------------------------
 // GET RGB
 // -----------------------------------------------------------------------
 
@@ -117,6 +99,14 @@ function showValue(value) {
 // RESET VALUES
 // -----------------------------------------------------------------------
 
+// Default
+let defaultValues = {
+  r: '100',
+  g: '100',
+  b: '250',
+  a: '1'
+}
+
 // RGB
 function rgbReset(range1, range2, range3, value1, value2, value3, result, txt) {
 
@@ -127,6 +117,8 @@ function rgbReset(range1, range2, range3, value1, value2, value3, result, txt) {
   value1.innerHTML = defaultValues.r
   value2.innerHTML = defaultValues.g
   value3.innerHTML = defaultValues.b
+
+  let defaultRGBValues = "rgb("+ defaultValues.r +", "+ defaultValues.g +", "+ defaultValues.b +")"
 
   result.style.background = defaultRGBValues
   txt.innerHTML = defaultRGBValues
@@ -154,6 +146,8 @@ function rgbaReset(range1, range2, range3, range4, value1, value2, value3, value
   value2.innerHTML = defaultValues.g
   value3.innerHTML = defaultValues.b
   value4.innerHTML = defaultValues.a
+
+  let defaultRGBAValues = "rgba("+ defaultValues.r +", "+ defaultValues.g +", "+ defaultValues.b +", "+ defaultValues.a +")"
 
   result.style.background = defaultRGBAValues
   txt.innerHTML = defaultRGBAValues
