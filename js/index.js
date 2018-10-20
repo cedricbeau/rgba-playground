@@ -39,6 +39,7 @@ function rgbDefFunc() {
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
+
   rgbDef(values[0], values[1], values[2], ranges[0].value, ranges[1].value, ranges[2].value, result, txt)
 
 }
@@ -67,6 +68,7 @@ function rgbaDefFunc() {
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
+
   rgbaDef(values[0], values[1], values[2], values[3], ranges[0].value, ranges[1].value, ranges[2].value, ranges[3].value, result, txt)
 
 }
@@ -136,6 +138,7 @@ function rgbResetFunc() {
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
+
   rgbReset(ranges[0],ranges[1],ranges[2],values[0],values[1],values[2],result,txt)
 }
 
@@ -163,6 +166,7 @@ function rgbaResetFunc() {
   let values = document.querySelectorAll(".selector_value")
   let result = document.body
   let txt = document.querySelector('.resultat')
+
   rgbaReset(ranges[0],ranges[1],ranges[2],ranges[3],values[0],values[1],values[2],values[3],result,txt)
 
 }
