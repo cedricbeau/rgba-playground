@@ -73,7 +73,9 @@ body {
     padding: .3125rem 1.25rem;
     background: rgba(255, 255, 255, .75);
     border: none;
+    border-radius: 2px;
     text-transform: uppercase;
+    transition: background .2s;
     cursor: pointer;
 
     &:hover {

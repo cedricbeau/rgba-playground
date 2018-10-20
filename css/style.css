@@ -85,7 +85,10 @@ body {
   padding: .3125rem 1.25rem;
   background: rgba(255, 255, 255, 0.75);
   border: none;
+  border-radius: 2px;
   text-transform: uppercase;
+  -webkit-transition: background .2s;
+  transition: background .2s;
   cursor: pointer;
 }
 
