@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// RGB FUNCTION
+// RGB
 // -----------------------------------------------------------------------
 
 function rgbDef(value1, value2, value3, range1, range2, range3, result, txt) {
@@ -40,7 +40,7 @@ function rgbResetFunc() {
 }
 
 // -----------------------------------------------------------------------
-// RGBA FUNCTION
+// RGBA
 // -----------------------------------------------------------------------
 
 function rgbaDef(value1, value2, value3, value4, range1, range2, range3, range4,  result, txt) {
@@ -90,11 +90,15 @@ function rgbaResetFunc() {
 
 }
 
-// Display RGBA
-rgbaDefFunc()
+// -----------------------------------------------------------------------
+// DISPLAY
+// -----------------------------------------------------------------------
 
-// Display RGB
+// RGB
 rgbDefFunc()
+
+// RGBA
+rgbaDefFunc()
 
 // Check opacity
 function checkOpacity() {
@@ -102,12 +106,20 @@ function checkOpacity() {
   let checkBox = document.getElementById("checkOpacity")
   // Get the opacity container
   let opacitySelector = document.getElementById("opacitySelector")
+  // Get opacity range
+  let opacityRange = document.querySelector('#opacitySelector input')
   // If the checkbox is checked
   if (checkBox.checked == true) {
+    // Show opacity range
     opacitySelector.style.display = "flex";
+    // Apply rgba function
     rgbaDefFunc()
   } else {
+    // Hide opacity range
     opacitySelector.style.display = "none";
+    // Reinitialize opacity value
+    opacityRange.value = 1
+    // Apply rgb function
     rgbDefFunc()
   }
 }
@@ -118,7 +130,10 @@ function showValue(value) {
   checkOpacity()
 }
 
-// Reset values
+// -----------------------------------------------------------------------
+// RESET
+// -----------------------------------------------------------------------
+
 function reset() {
   // Get the checkbox
   let checkBox = document.getElementById("checkOpacity")  
