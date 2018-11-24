@@ -1,4 +1,4 @@
-# rgba-selector
+# rgba-playground
 
 Outil en ligne pour générer une couleur RGB/RGBA
 
