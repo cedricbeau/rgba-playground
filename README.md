@@ -2,8 +2,15 @@
 
 Outil en ligne pour générer une couleur RGB/RGBA
 
+## Demo
+
+[https://cedricbeau.github.io/rgba-playground/](https://cedricbeau.github.io/rgba-playground/)
+
+![img/hsla-playground.png](img/rgba-playground.png "Screenshot")
+
 **Mise à jour 25/04/2020**
 
+* Ajout de la capture d'écran
 * Ajout du mode Offline
 * Ajout de la font icon Icomoon
 * Refactorisation de l'architecture CSS
