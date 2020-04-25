@@ -77,22 +77,6 @@
     </div>
   </footer>
 
-  <script>
-		//This is the "Offline page" service worker
-		if ('serviceWorker' in navigator) {
-		  navigator.serviceWorker.register('sw.js', { scope: './' }).then(function(reg) {
-		    // registration worked
-		    console.log('Registration succeeded. Scope is ' + reg.scope);
-		  }).catch(function(error) {
-		    // registration failed
-		    console.log('Registration failed with ' + error);
-		  });
-		};
-	</script>
-
-  <script src="sw.js" charset="utf-8"></script>
-  <script src="manup.js" charset="utf-8"></script>
-
   <script src="js/index.js"></script>
 
 </body>
