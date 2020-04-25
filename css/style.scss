@@ -4,44 +4,86 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?rmqgkb');
+  src:  url('../fonts/icomoon.eot?rmqgkb#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rmqgkb') format('truetype'),
+    url('../fonts/icomoon.woff?rmqgkb') format('woff'),
+    url('../fonts/icomoon.svg?rmqgkb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
 html {
   font-size: 100%;
 }
 
+@media only screen and (min-width: 480px) {
+  html,
+  body {
+    height: 100%;
+  }
+}
+
+
 body {
   position: relative;
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: #fff;
-}
-
-.resultat {
-  padding: 1rem;
-  background: rgba(00, 00, 00, .15);
-  border-radius: 2px;
-  box-shadow: inset 0px 0px 2px rgba(00, 00, 00, .15);
-  font-size: 1.25rem;
-  text-align: center;
+  background: #333;
 }
 
 .selectors {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  width: 20rem;
-  padding: 1rem;
-  background-color: rgba(00, 00, 00, 0.5);
+  padding: .3125rem;
+
+  &_inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .selector {
-  display: flex;
-  flex-wrap: wrap;
-  margin: .625rem 0;
+  flex: 1 0 20rem;
+  padding: 1rem;
+  margin: .3125rem;
+  background: rgba(00,00,00,.10);
+  border-radius: 2px;
+
+  &_inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &[class^="selector_"] {
     flex: 0 0 auto;
@@ -52,7 +94,6 @@ body {
   &_range {
     flex: 1 0 100%;
     margin: .625rem 0;
-    cursor: pointer;
   }
 
   &_label {
@@ -65,7 +106,15 @@ body {
   }
 }
 
-// Opacity container
+.opacity {
+  .selector_inner {
+    flex-direction: column;
+    max-width: 20rem;
+  }
+}
+
 #opacitySelector {
   display: none;
+  flex-wrap: wrap;
+  margin-top: .625rem;
 }

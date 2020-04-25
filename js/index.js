@@ -9,17 +9,17 @@ function rgbDef(value1, value2, value3, range1, range2, range3, result, txt) {
   value3.innerHTML = range3;
 
   let resultValues = "rgb(" + range1 + ", " + range2 + ", " + range3 + ")";
-  
+
   result.style.background = resultValues
   txt.innerHTML = resultValues
 
 }
 
 function rgbDefFunc() {
-  
+
   let ranges = document.querySelectorAll(".selector_range")
   let values = document.querySelectorAll(".selector_value")
-  let result = document.body
+  let result = document.querySelector('.colors')
   let txt = document.querySelector('.resultat')
 
   rgbDef(values[0], values[1], values[2], ranges[0].value, ranges[1].value, ranges[2].value, result, txt)
@@ -48,7 +48,7 @@ function rgbaDefFunc() {
 
   let ranges = document.querySelectorAll(".selector_range")
   let values = document.querySelectorAll(".selector_value")
-  let result = document.body
+  let result = document.querySelector('.colors')
   let txt = document.querySelector('.resultat')
 
   rgbaDef(values[0], values[1], values[2], values[3], ranges[0].value, ranges[1].value, ranges[2].value, ranges[3].value, result, txt)

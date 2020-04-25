@@ -2,6 +2,12 @@
 
 Outil en ligne pour générer une couleur RGB/RGBA
 
+**Mise à jour 25/04/2020**
+
+* Ajout de la font icon Icomoon
+* Refactorisation de l'architecture CSS
+* Ajout du .gitignore
+
 **Mise à jour 08/12/2018**
 
 * Changement du favicon

@@ -17,38 +17,63 @@
   <meta name="msapplication-TileColor" content="#603cba">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
   <div class="selectors">
-    <div class="selector">
-      <span class="selector_label">Red:</span>
-      <span class="selector_value"></span>
-      <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)">
-    </div>
-    <div class="selector">
-      <span class="selector_label">Green:</span>
-      <span class="selector_value"></span>
-      <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)">
-    </div>
-    <div class="selector">
-      <span class="selector_label">Blue:</span>
-      <span class="selector_value"></span>
-      <input type="range" class="selector_range" value="250" min="0" max="255" step="1" oninput="showValue(this.value)">
-    </div>
-    <div class="selector">
-      <input type="checkbox" name="opacity" id="checkOpacity" onclick="checkOpacity()">
-      <label for="checkOpacity">Opacité</label>
-    </div>
-    <div id="opacitySelector" class="selector">
-      <span class="selector_label">Alpha:</span>
-      <span class="selector_value"></span>
-      <input type="range" class="selector_range" value="1" min="0" max="1" step="0.01" oninput="showValue(this.value)">
-    </div>
+    <div class="selectors_inner">
+      <div class="selector">
+        <div class="selector_inner">
+          <span class="selector_label">Red:</span>
+          <span class="selector_value"></span>
+          <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+        </div>
+      </div>
+      <div class="selector">
+        <div class="selector_inner">
+          <span class="selector_label">Green:</span>
+          <span class="selector_value"></span>
+          <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+        </div>
+      </div>
+      <div class="selector">
+        <div class="selector_inner">
+          <span class="selector_label">Blue:</span>
+          <span class="selector_value"></span>
+          <input type="range" class="selector_range" value="250" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+        </div>
+      </div>
+      <div class="selector opacity">
+        <div class="selector_inner">
+          <div class="opacity_check">
+            <input type="checkbox" name="opacity" id="checkOpacity" onclick="checkOpacity()">
+            <label for="checkOpacity">Opacité</label>
+          </div>
+          <div id="opacitySelector" class="opacity_range">
+            <span class="selector_label">Alpha:</span>
+            <span class="selector_value"></span>
+            <input type="range" class="selector_range" value="1" min="0" max="1" step="0.01" oninput="showValue(this.value)" onchange="showValue(this.value)">
+          </div>
+        </div>
+      </div>
+     </div>
+  </div>
+  <link rel="stylesheet" href="css/colors.min.css">
+  <div class="colors">
     <div class="resultat"></div>
   </div>
+  <link rel="stylesheet" href="css/footer.min.css">
+  <footer class="container">
+    <div span="me">
+      <script type="text/javascript">document.write(new Date().getFullYear());</script>
+      - <span class="icon-embed2"></span> avec <span class="icon-heart"></span> par <a href="https://cedricbeau.pro/" title="cedricbeau.pro">Cédric Beau</a>
+    </div>
+    <div class="github">
+      <a href="https://cedricbeau.github.io/rgba-playground/"><span class="icon-github"></span></a>
+    </div>
+  </footer>
 
   <script src="js/index.js"></script>
 
