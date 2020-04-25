@@ -4,7 +4,7 @@ Outil en ligne pour générer une couleur RGB/RGBA
 
 **Mise à jour 25/04/2020**
 
-* Add offline mode
+* Ajout du mode Offline
 * Ajout de la font icon Icomoon
 * Refactorisation de l'architecture CSS
 * Ajout du .gitignore
