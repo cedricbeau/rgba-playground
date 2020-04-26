@@ -1,15 +1,19 @@
 /* ---------- Result ---------- */
 
-.colors {
+.resultat {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: rgba(00, 00, 00, .15);
   border-radius: 2px;
-  box-shadow: inset 0px 0px 2px rgba(00, 00, 00, .15);
-  font-size: 1.25rem;
+  font-size: 1.25em;
   text-align: center;
+
+  &_value {
+    padding: .875em;
+    background: rgba(00, 00, 00, .15);
+    border-radius: .3125rem;
+  }
 }
 

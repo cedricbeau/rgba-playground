@@ -30,41 +30,36 @@
         <div class="selector_inner">
           <span class="selector_label">Red:</span>
           <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+          <input type="range" class="selector_range" value="100" min="0" max="255" step="1">
         </div>
       </div>
       <div class="selector">
         <div class="selector_inner">
           <span class="selector_label">Green:</span>
           <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="100" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+          <input type="range" class="selector_range" value="100" min="0" max="255" step="1">
         </div>
       </div>
       <div class="selector">
         <div class="selector_inner">
           <span class="selector_label">Blue:</span>
           <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="250" min="0" max="255" step="1" oninput="showValue(this.value)" onchange="showValue(this.value)">
+          <input type="range" class="selector_range" value="250" min="0" max="255" step="1">
         </div>
       </div>
       <div class="selector opacity">
         <div class="selector_inner">
-          <div class="opacity_check">
-            <input type="checkbox" name="opacity" id="checkOpacity" onclick="checkOpacity()">
-            <label for="checkOpacity">Opacité</label>
-          </div>
-          <div id="opacitySelector" class="opacity_range">
-            <span class="selector_label">Alpha:</span>
+          <span class="selector_label">Alpha:</span>
             <span class="selector_value"></span>
-            <input type="range" class="selector_range" value="1" min="0" max="1" step="0.01" oninput="showValue(this.value)" onchange="showValue(this.value)">
+            <input type="range" class="selector_range" value="1" min="0" max="1" step="0.01">
           </div>
         </div>
       </div>
      </div>
   </div>
-  <link rel="stylesheet" href="css/colors.min.css">
-  <div class="colors">
-    <div class="resultat"></div>
+  <link rel="stylesheet" href="css/resultat.min.css">
+  <div class="resultat">
+    <div class="resultat_value"></div>
   </div>
   <link rel="stylesheet" href="css/footer.min.css">
   <footer class="container">

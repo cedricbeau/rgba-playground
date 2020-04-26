@@ -8,6 +8,12 @@ Outil en ligne pour générer une couleur RGB/RGBA
 
 ![img/hsla-playground.png](img/rgba-playground.png "Screenshot")
 
+**Mise à jour 26/04/2020**
+
+* Refactorisation du JavaScript
+* Maj des styles
+* Modification de la capture d'écran
+
 **Mise à jour 25/04/2020**
 
 * Ajout de la capture d'écran
