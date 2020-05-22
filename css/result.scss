@@ -1,0 +1,19 @@
+/* ---------- Result ---------- */
+
+.resultat {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2px;
+  font-size: 1.25em;
+  text-align: center;
+
+  &_value {
+    padding: .875em;
+    background: rgba(00, 00, 00, .15);
+    border-radius: .3125rem;
+  }
+}
+
