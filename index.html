@@ -17,59 +17,56 @@
   <meta name="msapplication-TileColor" content="#603cba">
   <meta name="theme-color" content="#ffffff">
 
+  <script src="js/vue.min.js"></script>
   <link rel="manifest" href="manifest.json"></link>
 
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
 
-  <div class="selectors">
-    <div class="selectors_inner">
-      <div class="selector">
-        <div class="selector_inner">
-          <span class="selector_label">Red:</span>
-          <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="100" min="0" max="255" step="1">
+  <div id="app">
+    <div class="app__content">
+      <div class="selectors">
+        <div class="selectors_inner">
+          <div class="selector"
+               v-for="selector in selectors"
+               :key=selector.id>
+            <div class="selector_inner">
+              <label for="red"
+                     class="selector_label">{{selector.name}}</label>
+              <span class="selector_value"></span>
+              <input type="range"
+                     class="selector_range"
+                     :value="selector.defaultValue"
+                     :min="selector.valueMin"
+                     :max="selector.valueMax"
+                     :step="selector.step"
+                     :id="selector.name"
+                     @input="displayRgba">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="selector">
-        <div class="selector_inner">
-          <span class="selector_label">Green:</span>
-          <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="100" min="0" max="255" step="1">
-        </div>
+      <link rel="stylesheet" href="css/result.min.css">
+      <div class="resultat"
+           :style="{backgroundColor: defaultBackground}">
+        <div class="resultat_value">{{defaultBackground}}</div>
       </div>
-      <div class="selector">
-        <div class="selector_inner">
-          <span class="selector_label">Blue:</span>
-          <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="250" min="0" max="255" step="1">
+      <link rel="stylesheet" href="css/foot.min.css">
+      <footer class="container">
+        <div span="me">
+          <script type="text/javascript">document.write(new Date().getFullYear());</script>
+          - <span class="icon-embed2"></span> avec <span class="icon-heart"></span> par <a :href="links.site" :title="links.siteTitle">Cédric Beau</a>
         </div>
-      </div>
-      <div class="selector opacity">
-        <div class="selector_inner">
-          <span class="selector_label">Alpha:</span>
-          <span class="selector_value"></span>
-          <input type="range" class="selector_range" value="1" min="0" max="1" step="0.01">
-        </div>
-      </div>
+        <a :href="links.repo"
+           :title="links.repoTitle"
+           class="github">
+          <span class="icon-github"></span>
+        </a>
+      </footer>
     </div>
   </div>
-  <link rel="stylesheet" href="css/resultat.min.css">
-  <div class="resultat">
-    <div class="resultat_value"></div>
-  </div>
-  <link rel="stylesheet" href="css/footer.min.css">
-  <footer class="container">
-    <div span="me">
-      <script type="text/javascript">document.write(new Date().getFullYear());</script>
-      - <span class="icon-embed2"></span> avec <span class="icon-heart"></span> par <a href="https://cedricbeau.pro/" title="cedricbeau.pro">Cédric Beau</a>
-    </div>
-    <div class="github">
-      <a href="https://github.com/cedricbeau/rgba-playground"><span class="icon-github"></span></a>
-    </div>
-  </footer>
 
   <script>
     //This is the "Offline page" service worker
@@ -87,7 +84,7 @@
   <script src="sw.js" charset="utf-8"></script>
   <script src="manup.js" charset="utf-8"></script>
 
-  <script src="js/index.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 

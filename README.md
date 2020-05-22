@@ -8,13 +8,17 @@ Outil en ligne pour générer une couleur RGB/RGBA
 
 ![img/hsla-playground.png](img/rgba-playground.png "Screenshot")
 
-**Mise à jour 26/04/2020**
+**22/05/2020**
+
+* Passage à Vuejs
+
+**26/04/2020**
 
 * Refactorisation du JavaScript
 * Maj des styles
 * Modification de la capture d'écran
 
-**Mise à jour 25/04/2020**
+**25/04/2020**
 
 * Ajout de la capture d'écran
 * Ajout du mode Offline
@@ -22,15 +26,15 @@ Outil en ligne pour générer une couleur RGB/RGBA
 * Refactorisation de l'architecture CSS
 * Ajout du .gitignore
 
-**Mise à jour 08/12/2018**
+**08/12/2018**
 
 * Changement du favicon
 
-**Mise à jour 25//11/2018**
+**25//11/2018**
 
 * RGBA Selector devient RGBA Playground
 * Ajout du dossier favicon
 
-**Mise à jour 22/10/2018**
+**22/10/2018**
 
 * Suppression du reset
