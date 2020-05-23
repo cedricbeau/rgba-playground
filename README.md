@@ -11,6 +11,7 @@ Outil en ligne pour générer une couleur RGB/RGBA
 **22/05/2020**
 
 * Passage à Vuejs
+* Ajout de la detection d'IE en CSS
 
 **26/04/2020**
 
