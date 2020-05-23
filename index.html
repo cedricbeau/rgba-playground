@@ -26,31 +26,36 @@
 <body>
 
   <div id="app">
-    <div class="app__content">
+    <div class="app__content is-ie">
+      <header class="content__header">
+        <h1>Votre navigateur n'est pas supporté</h1>
+      </header>
+    </div>
+    <div class="app__content is-not-ie">
       <div class="selectors">
         <div class="selectors_inner">
           <div class="selector"
-               v-for="selector in selectors"
-               :key=selector.id>
+                v-for="selector in selectors"
+                :key=selector.id>
             <div class="selector_inner">
               <label for="red"
-                     class="selector_label">{{selector.name}}</label>
+                      class="selector_label">{{selector.name}}</label>
               <span class="selector_value"></span>
               <input type="range"
-                     class="selector_range"
-                     :value="selector.defaultValue"
-                     :min="selector.valueMin"
-                     :max="selector.valueMax"
-                     :step="selector.step"
-                     :id="selector.name"
-                     @input="displayRgba">
+                      class="selector_range"
+                      :value="selector.defaultValue"
+                      :min="selector.valueMin"
+                      :max="selector.valueMax"
+                      :step="selector.step"
+                      :id="selector.name"
+                      @input="displayRgba">
             </div>
           </div>
         </div>
       </div>
       <link rel="stylesheet" href="css/result.min.css">
       <div class="resultat"
-           :style="{backgroundColor: defaultBackground}">
+            :style="{backgroundColor: defaultBackground}">
         <div class="resultat_value">{{defaultBackground}}</div>
       </div>
       <link rel="stylesheet" href="css/foot.min.css">
@@ -60,8 +65,8 @@
           - <span class="icon-embed2"></span> avec <span class="icon-heart"></span> par <a :href="links.site" :title="links.siteTitle">Cédric Beau</a>
         </div>
         <a :href="links.repo"
-           :title="links.repoTitle"
-           class="github">
+            :title="links.repoTitle"
+            class="github">
           <span class="icon-github"></span>
         </a>
       </footer>

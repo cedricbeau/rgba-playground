@@ -1,3 +1,12 @@
+// Mixin IE
+@mixin target-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+// Reset
+
 *,
 *:before,
 *:after {
@@ -66,6 +75,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  &.is-ie {
+    display: none;
+  }
+
+  @include target-ie {
+
+    &.is-ie {
+      display: flex;
+    }
+
+    &.is-not-ie {
+      display: none;
+    }
+  }
 }
 
 .selectors {
